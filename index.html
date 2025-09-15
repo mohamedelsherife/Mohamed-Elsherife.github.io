@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mohamed Elsherife - Software Engineer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- ⬇️ ضع اسم ملف صورتك الشخصية هنا بدلاً من 'profile.png' -->
+    <link rel="icon" href="profile.png" type="image/png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Particles.js Background Style */
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        /* Smooth transition for hover effects */
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+
+    <script>
+        // --- Tailwind CSS Custom Configuration ---
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'background': '#111827',
+                        'surface': '#1F2937',   
+                        'primary': '#22d3ee',   
+                        'text-main': '#d1d5db', 
+                        'text-secondary': '#9ca3af',
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-text-main font-poppins">
+
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+
+    <!-- Navbar -->
+    <nav class="fixed w-full bg-surface/80 backdrop-blur-md shadow-lg z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <a href="#" class="text-2xl font-bold text-primary">ME</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="hover:text-primary transition-colors">About</a>
+                    <a href="#experience" class="hover:text-primary transition-colors">Experience</a>
+                    <a href="#projects" class="hover:text-primary transition-colors">Projects</a>
+                    <a href="#skills" class="hover:text-primary transition-colors">Skills</a>
+                    <a href="#education" class="hover:text-primary transition-colors">Education</a>
+                </div>
+                <button id="menu-btn" class="md:hidden text-gray-300 hover:text-primary">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden flex flex-col space-y-8 mt-3 mb-4 text-center">
+                <a href="#about" class="hover:text-primary transition-colors">About</a>
+                <a href="#experience" class="hover:text-primary transition-colors">Experience</a>
+                <a href="#projects" class="hover:text-primary transition-colors">Projects</a>
+                <a href="#skills" class="hover:text-primary transition-colors">Skills</a>
+                <a href="#education" class="hover:text-primary transition-colors">Education</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="hero" class="pt-32 pb-16 bg-gradient-to-br from-background to-surface text-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-1/2 text-center md:text-left">
+                    <h1 class="text-5xl font-bold mb-4">Mohamed Elsherife</h1>
+                    <p class="text-xl mb-8 text-primary">Software Engineer (Undergraduate Student)</p>
+                    <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                        <a href="mailto:mohammedelsherife@gmail.com" class="bg-primary text-background px-6 py-2 rounded-full font-semibold hover:bg-cyan-300 transition-colors">
+                            <i class="fas fa-envelope mr-2"></i>Email Me
+                        </a>
+                        <!-- ✅ تم إضافة رابط LinkedIn -->
+                        <a href="https://www.linkedin.com/in/mohamed-elsherife-6574ab384/" target="_blank" class="bg-surface text-white px-6 py-2 rounded-full hover:bg-gray-700 transition-colors">
+                            <i class="fab fa-linkedin mr-2"></i>LinkedIn
+                        </a>
+                        <!-- ✅ تم إضافة رابط GitHub -->
+                        <a href="https://github.com/mohamedelsherife" target="_blank" class="bg-surface text-white px-6 py-2 rounded-full hover:bg-gray-700 transition-colors">
+                            <i class="fab fa-github mr-2"></i>GitHub
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 mt-12 md:mt-0">
+                    <!-- ⬇️ ضع اسم ملف صورتك الشخصية هنا بدلاً من 'profile.png' -->
+                    <img src="profile.png" alt="Mohamed Elsherife" class="w-64 h-64 rounded-full border-4 border-primary shadow-lg mx-auto"/>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <!-- About Me Section -->
+        <section id="about" class="mb-20 pt-16">
+            <h2 class="text-3xl font-bold mb-12 text-center text-white">About Me</h2>
+            <div class="max-w-4xl mx-auto bg-surface rounded-2xl shadow-lg p-8 card-hover">
+                <p class="text-text-secondary leading-relaxed text-center text-lg">
+                    I am a motivated Software Engineering student with hands-on experience in Python, Streamlit, and data visualization. My passion lies in building dashboards, chatbots, and data-driven applications to deliver impactful business solutions and turn complex data into clear stories.
+                </p>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="mb-20 pt-16">
+            <h2 class="text-3xl font-bold mb-8 text-center text-white">Experience</h2>
+            <div class="max-w-3xl mx-auto space-y-8">
+                <div class="bg-surface rounded-xl shadow-lg p-8 card-hover">
+                    <div class="flex items-start gap-4">
+                        <div class="w-16 h-16 bg-background rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-briefcase text-primary text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-white">Tatweer Research intern</h3>
+                            <p class="text-text-secondary mb-4">August 2025 – September 2025</p>
+                            <ul class="list-disc list-inside text-text-secondary space-y-2">
+                                <li>Completed training on the fundamentals of Python programming.</li>
+                                <li>Built an Amazon dashboard that improved data visualization and decision-making.</li>
+                                <li>Cleaned and preprocessed the Titanic dataset.</li>
+                                <li>Built a custom chatbot for Arriada - Group Store.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Projects Section -->
+        <section id="projects" class="mb-20 pt-16">
+            <h2 class="text-3xl font-bold mb-12 text-center text-white">Featured Projects</h2>
+            <div class="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-surface rounded-xl shadow-lg p-6 flex flex-col card-hover">
+                    <h3 class="text-xl font-semibold text-white mb-2">Interactive Titanic Dashboard</h3>
+                    <p class="text-text-secondary mb-4 flex-grow">A web app to explore the Titanic dataset with interactive filters and visualizations.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">Streamlit</span>
+                        <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">Pandas</span>
+                    </div>
+                </div>
+                <div class="bg-surface rounded-xl shadow-lg p-6 flex flex-col card-hover">
+                    <h3 class="text-xl font-semibold text-white mb-2">Data Cleaning Web Page</h3>
+                    <p class="text-text-secondary mb-4 flex-grow">A dedicated Streamlit page for cleaning and preprocessing the Titanic dataset.</p>
+                     <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">Streamlit</span>
+                        <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">NumPy</span>
+                    </div>
+                </div>
+                <div class="bg-surface rounded-xl shadow-lg p-6 flex flex-col card-hover">
+                    <h3 class="text-xl font-semibold text-white mb-2">Custom Chatbot</h3>
+                    <p class="text-text-secondary mb-4 flex-grow">A custom chatbot built for Arriada - Group Store to handle customer queries.</p>
+                     <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">Python</span>
+                        <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">NLP</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="mb-20 pt-16">
+            <h2 class="text-3xl font-bold mb-8 text-center text-white">Skills & Abilities</h2>
+            <div class="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="bg-surface rounded-lg p-4 text-center card-hover">
+                    <i class="fab fa-python text-primary text-4xl mb-2"></i>
+                    <p>Python, Java, C++</p>
+                </div>
+                <div class="bg-surface rounded-lg p-4 text-center card-hover">
+                    <i class="fas fa-database text-primary text-4xl mb-2"></i>
+                    <p>Pandas & NumPy</p>
+                </div>
+                <div class="bg-surface rounded-lg p-4 text-center card-hover">
+                    <i class="fas fa-chart-pie text-primary text-4xl mb-2"></i>
+                    <p>Streamlit & Power BI</p>
+                </div>
+                <div class="bg-surface rounded-lg p-4 text-center card-hover">
+                    <i class="fas fa-puzzle-piece text-primary text-4xl mb-2"></i>
+                    <p>Problem Solving</p>
+                </div>
+                <div class="bg-surface rounded-lg p-4 text-center card-hover">
+                    <i class="fas fa-lightbulb text-primary text-4xl mb-2"></i>
+                    <p>Logical Thinking</p>
+                </div>
+                <div class="bg-surface rounded-lg p-4 text-center card-hover">
+                    <i class="fas fa-users text-primary text-4xl mb-2"></i>
+                    <p>Team Collaboration</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="mb-20 pt-16">
+            <h2 class="text-3xl font-bold mb-8 text-center text-white">Education</h2>
+            <div class="max-w-3xl mx-auto bg-surface rounded-xl shadow-lg overflow-hidden card-hover">
+                <div class="p-8">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-16 h-16 bg-background rounded-lg flex items-center justify-center">
+                            <i class="fas fa-graduation-cap text-primary text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-white">Software Engineering</h3>
+                            <p class="text-text-secondary">Libyan International Medical University</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4 mt-4">
+                        <div class="bg-background rounded-lg p-4 text-center">
+                            <p class="text-sm text-text-secondary">GPA</p>
+                            <p class="text-2xl font-semibold text-white">3.91</p>
+                        </div>
+                        <div class="bg-background rounded-lg p-4 text-center">
+                            <p class="text-sm text-text-secondary">Expected Graduation</p>
+                            <p class="text-2xl font-semibold text-white">2027</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-surface text-white py-6">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-4 text-text-secondary">© 2025 Mohamed Elsherife. Built with passion.</p>
+            <div class="flex justify-center space-x-6">
+                 <a href="mailto:mohammedelsherife@gmail.com" class="text-gray-400 hover:text-primary transition-colors">
+                    <i class="fas fa-envelope text-xl"></i>
+                </a>
+                 <!-- ✅ تم إضافة رابط LinkedIn -->
+                <a href="https://www.linkedin.com/in/mohamed-elsherife-6574ab384/" class="text-gray-400 hover:text-primary transition-colors">
+                    <i class="fab fa-linkedin text-xl"></i>
+                </a>
+                <!-- ✅ تم إضافة رابط GitHub -->
+                <a href="https://github.com/mohamedelsherife" class="text-gray-400 hover:text-primary transition-colors">
+                    <i class="fab fa-github text-xl"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- Particles.js Configuration ---
+        particlesJS("particles-js", {
+            "particles": { "number": { "value": 60, "density": { "enable": true, "value_area": 800 } }, "color": { "value": "#22d3ee" }, "shape": { "type": "circle" }, "opacity": { "value": 0.3, "random": true }, "size": { "value": 3, "random": true }, "line_linked": { "enable": true, "distance": 150, "color": "#22d3ee", "opacity": 0.2, "width": 1 }, "move": { "enable": true, "speed": 2, "direction": "none", "out_mode": "out" } },
+            "interactivity": { "detect_on": "canvas", "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": true, "mode": "push" }, "resize": true }, "modes": { "grab": { "distance": 140, "line_linked": { "opacity": 0.5 } }, "push": { "particles_nb": 4 } } },
+            "retina_detect": true
+        });
+
+        // --- Smooth Scroll & Mobile Menu ---
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            menuBtn.addEventListener('click', function () { mobileMenu.classList.toggle('hidden'); });
+        });
+    </script>
+</body>
+</html>
